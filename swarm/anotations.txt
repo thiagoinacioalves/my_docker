@@ -1,0 +1,6 @@
+dockerswarm1 192.168.122.10
+dockerswarm2 192.168.122.11
+dockerswarm3 192.168.122.12
+
+
+https://docs.docker.com/engine/install/centos/
