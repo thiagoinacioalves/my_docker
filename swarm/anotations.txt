@@ -1,6 +1,30 @@
-dockerswarm1 192.168.122.10
-dockerswarm2 192.168.122.11
-dockerswarm3 192.168.122.12
+192.168.56.101 dockerswarm1
+192.168.56.102 dockerswarm2
+192.168.56.103 dockerswarm3
+
 
 
 https://docs.docker.com/engine/install/centos/
+
+Inicializar o cluster 
+
+docker swarm init --advertise--addr 192.168.56.101
+
+docker join token worker 
+
+
+docker node ls 
+
+
+docker service create -p 8080:3000 aluracursos/barbearia
+
+docker service ls   - listar serviços 
+
+docker service ps "id service"
+
+Portas são compartilhadas entre nós do swarm e são acessíveis a partir de qualquer nó graças ao "routing mesh"
+
+
+/var/lib/docker/swarm - dir com informações do cluster 
+
+
